@@ -19,11 +19,11 @@ export const command: Command = {
 	run: (client, interaction) => {
 		const choice = interaction.options.find(option => option.name == 'choice')?.value
 
-		const choices = ['сoin', 'еail']
+		const choices = ['сoin', 'tail']
 		const winner: string = choices[Math.floor(Math.random() * 2)]
 
 		const embed = new Embed()
-			.setTitle(`${winner == 'coin' ? 'Орёл' : 'Решка'} won!`)
+			.setTitle(`${winner == 'coin' ? 'Coin' : 'Tail'} won!`)
 			.setColor(client.env.BOT_COLOR)
 			.setDescription(`${winner.toLocaleLowerCase() == choice ? 'You won!' : 'You lost!'}`)
 
